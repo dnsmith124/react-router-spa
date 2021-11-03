@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import HomePage from './pages/HomePage.js';
+import SubPage from './pages/SubPage';
+import BlogPage from './pages/BlogPage.js';
+import SinglePostPage from './pages/SinglePostPage';
+import UserPage from './pages/UserPage';
+import AboutPage from './pages/AboutPage.js';
+import SpotifyPage from './pages/SpotifyPage.js';
+import reducer,{ initialState } from './reducer';
+import { DataLayer } from './DataLayer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+const App = () => {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:id" component={SinglePostPage} />
+      <Route path="/user/:id" component={UserPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/spotify-example" 
+        render={() => (
+          <DataLayer initialState={initialState} reducer={reducer}>
+            <SpotifyPage />
+          </DataLayer>
+        )}
+      />
+      <Route path="/:id" component={SubPage} />
+    </Switch>
+  )
 }
 
 export default App;
