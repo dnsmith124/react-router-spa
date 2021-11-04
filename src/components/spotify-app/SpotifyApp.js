@@ -1,5 +1,5 @@
 import React from "react";
-import "../sass/components/spotify-app.scss";
+import "./spotify-app.scss";
 import SpotifyBody from "./SpotifyBody";
 import SpotifySidebar from "./SpotifySidebar";
 import SpotifyFooter from "./SpotifyFooter";

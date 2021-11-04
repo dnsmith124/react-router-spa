@@ -22,5 +22,30 @@ code {
 }
 
 .spotify-logo {
-  max-width: 300px;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+  @media screen and (min-width: 960px) {
+    max-width: 300px;
+  }
+}
+
+.spotify-body .header {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    input {
+      margin-left: 10px;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    h4 {
+      margin-left: 10px;
+    }
+  }
 }

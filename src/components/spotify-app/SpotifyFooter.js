@@ -1,5 +1,5 @@
 import React from "react";
-import "../sass/components/spotify-footer.scss";
+import "./spotify-footer.scss";
 import {
   PlayCircleOutline,
   SkipPrevious,

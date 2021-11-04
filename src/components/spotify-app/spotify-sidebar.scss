@@ -1,11 +1,8 @@
 .spotify-sidebar {
-  height: 100vh;
-  color: white;
   padding-left: 10px;
   padding-right: 10px;
-  flex: 0.2;
-  min-width: 230px;
-  background-color: #040404;
+  margin-right: 30px;
+  margin: 0 30px 30px 0;
 }
 
 .spotify-sidebar > hr {
@@ -25,4 +22,14 @@
   margin-left: 5px;
   padding: 5px;
   font-size: 12px;
+  text-align: center;
+}
+
+.spotify-sidebar__options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (min-width: 768px) {
+    display: block;
+
+  }
 }

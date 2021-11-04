@@ -5,11 +5,12 @@
   align-items: center;
   z-index: 100;
   color: white;
+  text-decoration: none;
 }
 .song-row:hover {
   cursor: pointer;
   background-color: black;
-  opacity: 0.8;
+  color: white;
 }
 .song-row__info {
   margin-left: 20px;

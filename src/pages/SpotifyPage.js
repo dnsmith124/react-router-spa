@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import Spotify  from "../components/Spotify";
+import Spotify  from "../components/spotify-app/Spotify";
 import '../sass/pages/spotifyPage.scss';
 
 const SpotifyPage = () => {

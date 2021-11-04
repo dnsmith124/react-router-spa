@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import SpotifyLogin from '../components/SpotifyLogin';
-import SpotifyApp from '../components/SpotifyApp';
+import SpotifyLogin from './SpotifyLogin';
+import SpotifyApp from './SpotifyApp';
 import SpotifyWebApi from "spotify-web-api-js";
-import { useDataLayerValue } from '../DataLayer';
-import "../sass/components/spotify.scss";
+import { useDataLayerValue } from '../../DataLayer';
+import "./spotify.scss";
 
 const spotify = new SpotifyWebApi();
 
@@ -47,7 +47,6 @@ const Spotify = () => {
         type: "SET_TOKEN",
         token: _token,
       });
-      console.log("[token]", token);
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         dispatch({

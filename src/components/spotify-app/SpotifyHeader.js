@@ -1,8 +1,8 @@
 import React from "react";
 import { Search } from "@material-ui/icons";
-import "../sass/components/spotify-header.scss";
+import "./spotify-header.scss";
 import { Avatar } from "@material-ui/core";
-import { useDataLayerValue } from "../DataLayer";
+import { useDataLayerValue } from "../../DataLayer";
 
 function SpotifyHeader() {
   const [{ user }, dispatch] = useDataLayerValue();
@@ -10,8 +10,8 @@ function SpotifyHeader() {
   return (
     <div className="header">
       <div className="header__left">
-        <Search />
-        <input placeholder="Search for Artists, Songs, or Albums" type="text" />
+        {/* <Search />
+        <input placeholder="Search for Artists, Songs, or Albums" type="text" /> */}
       </div>
       <div className="header__right">
         <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
