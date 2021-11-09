@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import SpotifyLogin from './SpotifyLogin';
 import SpotifyApp from './SpotifyApp';
 import SpotifyWebApi from "spotify-web-api-js";
@@ -61,6 +61,8 @@ const Spotify = () => {
         });
       });
     }
+
+    console.log(user);
   }, []);
 
   return (

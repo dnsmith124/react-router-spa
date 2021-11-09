@@ -8,4 +8,37 @@ header {
       max-width: 150px;
     }
   }
+  .header-right {
+    .track {
+      margin-bottom: 20px;
+      .current-track-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        img {
+          max-width: 75px;
+        }
+        .track-name, .artist-name {
+          display: block;
+          font-size: 14px;
+        }
+        .track-name {
+          font-weight: 700;
+        }
+        .artist-name {
+          font-weight: 400;
+        }
+        .component-title {
+          text-align: center;
+          margin-right: 20px;
+        }
+        .component-content {
+          display: grid;
+          align-items: center;
+          grid-template-columns: repeat(2 ,auto);
+          grid-column-gap: 20px;
+        }
+      }
+    }
+  }
 }

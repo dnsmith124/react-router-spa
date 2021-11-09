@@ -5,7 +5,7 @@ import SpotifySidebar from "./SpotifySidebar";
 import SpotifyFooter from "./SpotifyFooter";
 
 const SpotifyApp = ({ spotify }) => {
-  
+
   return (
     <div className="app">
       <div className="app__body">
